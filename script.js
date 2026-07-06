@@ -28,7 +28,7 @@ const authorName = document.querySelector('.author-name');
 const authorImg = document.getElementById('author-img');
 const favoritesList = document.getElementById('favorites-list');
 
-// انتخاب دکمه‌ها بر اساس کلاس و ترتیب قرارگیری در HTML
+// انتخاب دکمه‌های اصلی بر اساس کلاس و ترتیب قرارگیری در HTML
 const buttons = document.querySelectorAll('.action-btn');
 const nextBtn = buttons[0];  // دکمه جمله بعدی
 const starBtn = buttons[1];  // دکمه ستاره‌دار کردن
@@ -37,6 +37,13 @@ const speakBtn = buttons[3]; // دکمه پخش صدا
 const bgBtn = buttons[4];    // دکمه تغییر رنگ پس‌زمینه
 const shareBtn = buttons[5]; // دکمه اشتراک‌گذاری
 const clearAllBtn = document.getElementById('clear-all-btn');
+
+// انتخاب دکمه‌های سایز فونت به کمک ID
+const decreaseFontBtn = document.getElementById('decrease-font');
+const increaseFontBtn = document.getElementById('increase-font');
+
+// اندازه اولیه متن بر حسب rem
+let currentFontSize = 1.2;
 
 // ۳. عملکرد دکمه «جمله بعدی» (تغییر تصادفی متن، نام و عکس)
 nextBtn.addEventListener('click', () => {
@@ -100,5 +107,20 @@ shareBtn.addEventListener('click', () => {
         }).catch(console.error);
     } else {
         alert("قابلیت اشتراک‌گذاری مستقیم در این مرورگر فعال نیست. لطفاً از دکمه کپی استفاده کنید.");
+    }
+});
+
+// ۱۰. عملکرد دکمه‌های بزرگ‌نمایی و کوچک‌نمایی متن (A+ و A-)
+increaseFontBtn.addEventListener('click', () => {
+    if (currentFontSize < 2.5) { // حداکثر اندازه برای جلوگیری از به هم ریختگی چیدمان
+        currentFontSize += 0.15;
+        quoteText.style.fontSize = `${currentFontSize}rem`;
+    }
+});
+
+decreaseFontBtn.addEventListener('click', () => {
+    if (currentFontSize > 0.8) { // حداقل اندازه مجاز متن
+        currentFontSize -= 0.15;
+        quoteText.style.fontSize = `${currentFontSize}rem`;
     }
 });
