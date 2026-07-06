@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سخن بزرگان</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quote-container">
+        <!-- هدر پروژه -->
+        <header class="quote-header">
+            <h1>✨ سخن بزرگان</h1>
+            <p>موضوع: علمی</p>
+            <div class="font-size-controls">
+                <button id="decrease-font">A-</button>
+                <button id="increase-font">A+</button>
+            </div>
+        </header>
+
+        <!-- تصویر و متن سخن -->
+        <main class="quote-content">
+            <div class="author-image-wrapper">
+                <img src="images/hawking.jpg" alt="استیون هاوکینگ" id="author-img">
+            </div>
+            <p class="quote-text">"هوشمندی یعنی توانایی تطبیق با تغییرات."</p>
+            <h2 class="author-name">استیون هاوکینگ</h2>
+        </main>
+
+        <!-- دکمه‌های کنترلی دو ستونه -->
+        <section class="quote-actions">
+            <button class="action-btn">🔄 جمله بعدی</button>
+            <button class="action-btn">⭐ ستاره‌دار کردن</button>
+            <button class="action-btn">📋 کپی</button>
+            <button class="action-btn">🔊 پخش صدا</button>
+            <button class="action-btn">🎨 تغییر رنگ پس‌زمینه</button>
+            <button class="action-btn">🔗 اشتراک‌گذاری</button>
+        </section>
+
+        <!-- بخش جملات برگزیده -->
+        <footer class="favorites-section">
+            <div class="favorites-header">
+                <h3>📚 جملات برگزیده شما:</h3>
+                <button id="clear-all-btn">پاک کردن همه</button>
+            </div>
+            <ul id="favorites-list">
+                <!-- جملات ذخیره شده در اینجا اضافه می‌شوند -->
+            </ul>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* تنظیمات کلی فونت و رنگ پس‌زمینه تاریک */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #12161a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* باکس اصلی کارت */
+.quote-container {
+    background: linear-gradient(145deg, #1e252b, #171d22);
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* هدر کارت */
+.quote-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #ffca28;
+}
+.quote-header p {
+    color: #8a99a6;
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+.font-size-controls button {
+    background: none;
+    border: 1px solid #3d4a54;
+    color: #fff;
+    padding: 3px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* بخش عکس گرد و متون */
+.author-image-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+.author-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.quote-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+.author-name {
+    color: #00e5ff;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* چیدمان دو ستونه دکمه‌ها با Grid */
+.quote-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+.action-btn {
+    background-color: #242f38;
+    border: 1px solid #3d4a54;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+.action-btn:hover {
+    background-color: #2f3d49;
+    border-color: #00e5ff;
+}
+
+/* بخش پایینی جملات برگزیده */
+.favorites-section {
+    border-top: 1px solid #3d4a54;
+    padding-top: 20px;
+    text-align: right;
+}
+.favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.favorites-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+#clear-all-btn {
+    background-color: #e63946;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+#clear-all-btn:hover {
+    background-color: #c1121f;
+}
